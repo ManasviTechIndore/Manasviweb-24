@@ -1,0 +1,61 @@
+/* src/components/AboutUs.css */
+
+.about-us {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f4f4f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  .about-us h2 {
+    color: #333;
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  .about-us h3 {
+    color: #555;
+    font-size: 24px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+  
+  .about-us h4 {
+    color: #666;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .about-us p {
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  @media (max-width: 768px) {
+    .about-us {
+      padding: 15px;
+    }
+  
+    .about-us h2 {
+      font-size: 24px;
+    }
+  
+    .about-us h3 {
+      font-size: 20px;
+    }
+  
+    .about-us h4 {
+      font-size: 18px;
+    }
+  
+    .about-us p {
+      font-size: 14px;
+    }
+  }
+  
