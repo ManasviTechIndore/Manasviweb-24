@@ -50,11 +50,18 @@ export const Header = () => {
                         <Typography component="h6" style={{fontWeight:'bold',color:'black'}}>Services</Typography>
                         </Link>
                         <Typography component="h6" style={{fontWeight:'bold'}}>Products</Typography>
+                        <Link to="/ourteam">
                         <Typography component="h6" style={{fontWeight:'bold'}}>OurTeam</Typography>
+                        </Link>
+                        <Link to="/ourclient">
+                        <Typography component="h6" style={{fontWeight:'bold'}}>OurClient</Typography>
+                        </Link>
                         <Typography component="h6" style={{fontWeight:'bold'}}>Clients</Typography>
                     <Link to="/portfolio">
                         <Typography component="h6" style={{fontWeight:'bold',color:'black'}}>Portfolio</Typography>
+                    
                     </Link>
+                    
                         <Typography component="h6" style={{fontWeight:'bold'}}>Schedule Meeting</Typography>
                         <Typography component="h6" style={{fontWeight:'bold'}}>About Us</Typography>
                     </Box>
