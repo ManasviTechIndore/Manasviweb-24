@@ -33,16 +33,14 @@ const teamMembers = [
 
 const OurTeam = () => {
   return (
+  
     <>
-    <div
-    //   initial={{ opacity: 0 }}
-    //   animate={{ opacity: 1 }}
-    //   exit={{ opacity: 0 }}
-    >
-        <Header/>
+          
+          <Header/>
+   
         
 
-       
+       <div className='our-team'>
       <h2 className='heading'>Our Team</h2>
       <p className='para'>Meet the dedicated team behind Manasvi Technologies OPC Private Limited.</p>
       
@@ -59,10 +57,13 @@ const OurTeam = () => {
               </div>
             </li>
           ))
-}
+}    
+
       </ul>
-      <Footer />
-    </div>
+      </div>
+
+    <Footer />
+
     </>
   );
 };

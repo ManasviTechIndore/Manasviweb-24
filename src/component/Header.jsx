@@ -76,36 +76,42 @@ export const Header = () => {
                     <Link to="/service">
                         <Typography component="h6" style={{fontWeight:'bold',color:'black'}}>Services</Typography>
                         </Link>
-<<<<<<< HEAD
-                        <Typography component="h6" style={{fontWeight:'bold'}}>Products</Typography>
-                        <Link to="/ourteam">
-                        <Typography component="h6" style={{fontWeight:'bold'}}>OurTeam</Typography>
-                        </Link>
-                        <Link to="/ourclient">
-                        <Typography component="h6" style={{fontWeight:'bold'}}>OurClient</Typography>
-                        </Link>
-                        <Typography component="h6" style={{fontWeight:'bold'}}>Clients</Typography>
-=======
+{/* <<<<<<< HEAD */}
+                        {/* <Typography component="h6" style={{fontWeight:'bold'}}>Products</Typography> */}
+                        
+                        
+                        {/* <Typography component="h6" style={{fontWeight:'bold'}}>Clients</Typography> */}
+{/* ======= */}
                     <Link to="/products">
                         <Typography component="h6" style={{fontWeight:'bold',color:'black'}}>Products</Typography>
                     </Link>    
+                    <Link to="/ourteam">
                         <Typography component="h6" style={{fontWeight:'bold',color:'black'}}>OurTeam</Typography>
+                        </Link>
+                        <Link to="/clients">
                         <Typography component="h6" style={{fontWeight:'bold',color:'black'}}>Clients</Typography>
->>>>>>> 6e02e71481f8f02a86e94c2756572ff887839c77
+                        </Link>
+{/* >>>>>>> 6e02e71481f8f02a86e94c2756572ff887839c77 */}
                     <Link to="/portfolio">
                         <Typography component="h6" style={{fontWeight:'bold',color:'black'}}>Portfolio</Typography>
                     
                     </Link>
-<<<<<<< HEAD
+{/* <<<<<<< HEAD
+// <<<<<<< HEAD */}
                     
-                        <Typography component="h6" style={{fontWeight:'bold'}}>Schedule Meeting</Typography>
-=======
+                        {/* <Typography component="h6" style={{fontWeight:'bold'}}>Schedule Meeting</Typography> */}
+{/* ======= */}
+{/* ======= */}
+                        {/* <Typography component="h6" style={{fontWeight:'bold'}}>Schedule Meeting</Typography> */}
+{/* >>>>>>> 94f19934d8c55582c42832a8eed8931635b997cf */}
                    <Link to ='/schedule-meeting'>
                    <Typography component="h6" style={{fontWeight:'bold',color:'black'}}>Schedule Meeting</Typography>
                    </Link>
-                        
->>>>>>> 6e02e71481f8f02a86e94c2756572ff887839c77
-                        <Typography component="h6" style={{fontWeight:'bold'}}>About Us</Typography>
+                   <Link to="/about-us/about">
+
+{/* >>>>>>> 6e02e71481f8f02a86e94c2756572ff887839c77 */}
+                        <Typography component="h6" style={{fontWeight:'bold',color:'black'}}>About Us</Typography>
+                        </Link>
                     </Box>
                 </Grid>
                 <Grid item lg={2} md={2} xs={2}>
