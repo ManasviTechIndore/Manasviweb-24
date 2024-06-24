@@ -1,8 +1,8 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import {LandingScreen} from "./pages/LandingScreen"
-import ContentUs from "./component/ContentUs"
 import Portfolio from "./component/Portfolio"
 import Services from "./component/Services"
+import Products from "./pages/Products"
 
 function App() {
  
@@ -12,8 +12,8 @@ function App() {
       <Routes>     
         <Route path="/" element={<LandingScreen/>} /> 
         <Route path="/service" element={<Services/>} /> 
+        <Route path="/products" element={<Products/>} /> 
         <Route path="/portfolio" element={<Portfolio/>} /> 
-        <Route path="/contact" element={<ContentUs/>} /> 
       </Routes>
     </BrowserRouter>
    </>

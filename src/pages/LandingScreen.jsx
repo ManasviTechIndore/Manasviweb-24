@@ -19,7 +19,7 @@ import caseStudy from "../assets/studycase1.png";
 import caseStudy2 from "../assets/studycase2.png";
 import caseStudy3 from "../assets/studycase3.png";
 import about from "../images/marketing.png";
-import { dataCard } from "../Data";
+import { services } from "../Data";
 import { makeStyles } from '@material-ui/core/styles';
 import { Link, duration } from '@mui/material';
 import AOS from 'aos';
@@ -148,7 +148,7 @@ export const LandingScreen = () => {
                     </Box>
                     <Box className={classes.serviceCard}>
                         <Grid container spacing={0} >
-                            {dataCard.map((cards) =>
+                            {services.map((cards) =>
                                 <Grid item sm={6} xs={6} md={4}>
                                     <Box data-aos="flip-right" style={{ display: 'flex', justifyContent: 'center', alignItems: 'cente' }}>
                                         <Box className={classes.services} >
