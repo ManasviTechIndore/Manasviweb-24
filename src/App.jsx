@@ -7,6 +7,8 @@ import Aboutus from "./component/about-us/Aboutus"
 
 
 import ScheduleMeeting from "./component/ScheduleMeeting"
+import Products from "./pages/Products"
+
 function App() {
  
   return (
