@@ -4,6 +4,8 @@ import ContactUs from "./component/ContactUs"
 import Portfolio from "./component/Portfolio"
 import Services from "./component/Services"
 import ScheduleMeeting from "./component/ScheduleMeeting"
+import Products from "./pages/Products"
+
 function App() {
  
   return (
