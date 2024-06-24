@@ -3,6 +3,8 @@ import {LandingScreen} from "./pages/LandingScreen"
 import ContentUs from "./component/ContentUs"
 import Portfolio from "./component/Portfolio"
 import Services from "./component/Services"
+import Aboutus from "./component/about-us/Aboutus"
+
 
 function App() {
  
@@ -14,6 +16,7 @@ function App() {
         <Route path="/service" element={<Services/>} /> 
         <Route path="/portfolio" element={<Portfolio/>} /> 
         <Route path="/contact" element={<ContentUs/>} /> 
+        <Route path="/about-us/about" element={<Aboutus/>}/>
       </Routes>
     </BrowserRouter>
    </>

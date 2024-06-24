@@ -56,7 +56,9 @@ export const Header = () => {
                         <Typography component="h6" style={{fontWeight:'bold',color:'black'}}>Portfolio</Typography>
                     </Link>
                         <Typography component="h6" style={{fontWeight:'bold'}}>Schedule Meeting</Typography>
+                        <Link to="/about-us/about">
                         <Typography component="h6" style={{fontWeight:'bold'}}>About Us</Typography>
+                        </Link>
                     </Box>
                 </Grid>
                 <Grid item lg={2} md={2} xs={2}>
