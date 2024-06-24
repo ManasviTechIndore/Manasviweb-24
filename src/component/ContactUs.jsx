@@ -1,7 +1,7 @@
-
 import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
 import styled from 'styled-components';
+import toast, { Toaster } from 'react-hot-toast';
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
@@ -25,14 +25,18 @@ const ContactUs = () => {
     emailjs.send('service_ywjerxn', 'template_vl3r46h', formData, 'B5N5g0XkBqbt3d5Iq')
       .then((response) => {
         console.log('SUCCESS!', response.status, response.text);
+        toast.success('Email has been sent successfully');
         setSubmitted(true);
-      }, (err) => {
+      })
+      .catch((err) => {
+        toast.error('Something went wrong');
         console.error('FAILED...', err);
       });
   };
 
   return (
     <PageWrapper>
+      <Toaster />
       <StyledContactForm>
         <h2>Contact Us</h2>
         {submitted ? (
@@ -85,7 +89,7 @@ const ContactUs = () => {
 export default ContactUs;
 
 const PageWrapper = styled.div`
-  background-color: #f0f0f0; 
+  background-color: #f0f0f0;
   padding: 20px;
   min-height: 100vh;
   display: flex;
@@ -94,8 +98,8 @@ const PageWrapper = styled.div`
 `;
 
 const StyledContactForm = styled.div`
-  width: 400px; 
-  background-color: #ffffff; 
+  width: 400px;
+  background-color: #ffffff;
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -109,6 +113,7 @@ const FormField = styled.div`
     font-size: 14px;
     margin-bottom: 5px;
     color: #333;
+    text-align: left; /* Align labels to the left */
   }
 
   input,
@@ -132,29 +137,29 @@ const FormField = styled.div`
 `;
 
 const SubmitButton = styled.button`
-  background-color: #007bff; 
+  background-color: #007bff;
   color: white;
   border: none;
-  padding: 12px 30px; 
+  padding: 12px 30px;
   font-size: 16px;
   border-radius: 20px;
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
 
   &:hover {
-    background-color: #0056b3; 
+    background-color: #0056b3;
   }
 `;
 
 const SuccessMessage = styled.div`
   padding: 20px;
-  background-color: #dff0d8; 
-  border: 1px solid #b2dba1; 
+  background-color: #dff0d8;
+  border: 1px solid #b2dba1;
   border-radius: 5px;
   margin-top: 20px;
 
   p {
     margin: 0;
-    color: #3c763d; 
+    color: #3c763d;
   }
 `;

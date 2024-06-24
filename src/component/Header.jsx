@@ -84,9 +84,12 @@ export const Header = () => {
                     <Link to="/portfolio">
                         <Typography component="h6" style={{fontWeight:'bold',color:'black'}}>Portfolio</Typography>
                     </Link>
-                        <Typography component="h6" style={{fontWeight:'bold',color:'black'}}>Schedule Meeting</Typography>
-                        <Typography component="h6" style={{fontWeight:'bold',color:'black'}}>About Us</Typography>                       
-                    </Box>                   
+                   <Link to ='/schedule-meeting'>
+                   <Typography component="h6" style={{fontWeight:'bold',color:'black'}}>Schedule Meeting</Typography>
+                   </Link>
+                        
+                        <Typography component="h6" style={{fontWeight:'bold'}}>About Us</Typography>
+                    </Box>
                 </Grid>
                 <Grid item lg={2} md={2} xs={2}>
                     <Box style={{ display: 'flex', justifyContent: 'end'}}>
