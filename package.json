@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "start": "tailwindcss build -i ./src/index.css -o ./src/App.css",
+    "start": "tailwindcss build -i ./src/indextailwind.css -o ./src/App.css",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
