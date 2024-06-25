@@ -62,7 +62,7 @@ const OurClients = () => {
   const currentClient = clients[currentIndex];
 
   return (
-    <>
+   <>
       <Header />
       <section className="our-clients">
         <div className="container">

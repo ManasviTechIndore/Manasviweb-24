@@ -1,5 +1,5 @@
 // src/components/OurTeam.js
-import React from 'react';
+import React , {useEffect, useState} from 'react';
 import "./OurTeam.css"
 import { Header } from './Header'
 import { Footer } from './Footer'
@@ -32,37 +32,50 @@ const teamMembers = [
 ];
 
 const OurTeam = () => {
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex(prevIndex => (prevIndex === teamMembers.length - 1 ? 0 : prevIndex + 1));
+    }, 3000); // Auto slide every 3 seconds
+
+    return () => clearInterval(interval);
+  }, []);
+  const currentTeam = teamMembers[currentIndex];
+
+
   return (
   
     <>
-          
-          <Header/>
    
-        
-
+    <Header style={{position: "fixed"}} />
+    
+      
        <div className='our-team'>
       <h2 className='heading'>Our Team</h2>
       <p className='para'>Meet the dedicated team behind Manasvi Technologies OPC Private Limited.</p>
       
       <ul className="team-list">
         {
-          teamMembers.map((member, index)=>(
-            <li key={index} className="team-member">
-              <img src={member.imageUrl} alt={member.name} className="profile-picture" />
+          // teamMembers.map((_, index)=>(
+            <li className="team-member">
+              <img src={currentTeam.imageUrl} alt={currentTeam.name} className="profile-picture" />
               <div className="member-info">
-               <h3>{member.name}</h3>
-                <p className="postion">{member.position}</p>
-                <p className="info">{member.info}</p>
+               <h3>{currentTeam.name}</h3>
+                <p className="postion">{currentTeam.position}</p>
+                <p className="info">{currentTeam.info}</p>
     
               </div>
             </li>
-          ))
+          // ))
 }    
 
       </ul>
       </div>
 
     <Footer />
+
 
     </>
   );

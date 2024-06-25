@@ -1,13 +1,19 @@
+
+
 .head-content {
   display: flex;
   justify-content: center;
+  
 }
 
 .our-team {
+ height: 100vh;
+ width: 100vw;
   text-align: center;
   padding: 40px 20px;
-  background: linear-gradient(0deg, #d9e9e8 0%, #cfbfda 100%); /* Updated background */
+  background: linear-gradient(0deg, #d9e9e8 0%, #cfbfda 100%);
   animation: gradientAnimation 5s ease infinite;
+  position: relative;
 }
 
 @keyframes gradientAnimation {
@@ -25,25 +31,6 @@
   opacity: 0;
 }
 
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-
-@keyframes blink-caret {
-  from,
-  to {
-    border-color: transparent;
-  }
-  50% {
-    border-color: #3498db;
-  }
-}
-
 @keyframes headingAnimation {
   0% { transform: translateY(-30px); opacity: 0; }
   100% { transform: translateY(0); opacity: 1; }
@@ -51,16 +38,12 @@
 
 .heading {
   font-size: 2em;
+  margin-top: 2px;
   display: flex;
   align-items: center;
   justify-content: center;
   animation: headingTextAnimation 2s ease-in-out infinite;
 }
-
-/* @keyframes headingTextAnimation {
-  0%, 100% { transform: scale(1); color: #6CB4EE; }
-  50% { transform: scale(1.1); color: #6CB4EE; }
-} */
 
 .para {
   font-size: 1.2em;
@@ -70,25 +53,6 @@
   color: purple;
   gap: 3px;
   animation: headingTextAnimation 2s ease-in-out infinite;
-}
-
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-
-@keyframes blink-caret {
-  from,
-  to {
-    border-color: transparent;
-  }
-  50% {
-    border-color: #3498db;
-  }
 }
 
 @keyframes headingTextAnimation {
@@ -106,12 +70,15 @@
   list-style-type: none;
   padding: 0;
   display: flex;
+  align-items: center;
+  justify-content: center;
   flex-wrap: nowrap;
-  overflow-x: auto;
+  overflow-x: hidden;
   gap: 20px;
 }
 
 .team-member {
+  flex: 0 0 300px;
   background: linear-gradient(145deg, #f0f0f0, #ffffff);
   border: none;
   border-radius: 20px;
@@ -127,7 +94,8 @@
 .team-member:hover {
   transform: translateY(-15px);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-  background-color: #ffb6c1; /* Light pink background on hover */
+  background-color: #ffb6c1;
+  z-index: 1;
 }
 
 .team-member::before {
@@ -162,7 +130,6 @@
 
 .member-info {
   text-align: center;
-  
 }
 
 .member-info h3 {
@@ -178,7 +145,7 @@
   100% { transform: translateY(0); opacity: 1; }
 }
 
-.postion{
+.postion {
   font-weight: bold;
   font-size: 1.1em;
   margin-bottom: 10px;
@@ -189,4 +156,77 @@
   font-size: 0.9em;
   color: #000;
   line-height: 1.4em;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .our-team h2 {
+    font-size: 2.2em;
+  }
+
+  .team-member {
+    width: 250px;
+    padding: 15px;
+  }
+
+  .profile-picture {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .our-team h2 {
+    font-size: 2em;
+  }
+
+  .team-member {
+    width: 200px;
+    padding: 10px;
+  }
+
+  .profile-picture {
+    width: 80px;
+    height: 80px;
+  }
+
+  .member-info h3 {
+    font-size: 1.3em;
+  }
+
+  .postion {
+    font-size: 1em;
+  }
+
+  .info {
+    font-size: 0.8em;
+  }
+}
+
+@media (max-width: 480px) {
+  .our-team h2 {
+    font-size: 1.8em;
+  }
+
+  .team-member {
+    width: 150px;
+    padding: 8px;
+  }
+
+  .profile-picture {
+    width: 60px;
+    height: 60px;
+  }
+
+  .member-info h3 {
+    font-size: 1.1em;
+  }
+
+  .postion {
+    font-size: 0.9em;
+  }
+
+  .info {
+    font-size: 0.7em;
+  }
 }
