@@ -31,7 +31,9 @@ const useStyles = makeStyles(() => ({
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        paddingLeft:'30px',
+        '@media (max-width: 600px)': {
+            // paddingLeft:'30px',
+          }
     },
     textBox: {
         lineHeight: '3rem',
@@ -117,8 +119,7 @@ export const LandingScreen = () => {
         <div>
             <Header/>        
             <Grid container>
-        <Grid item lg={12} className={classes.heroText} data-aos="fade-up"  >
-                    <Grid item lg={6} className={classes.heroText}>
+                    <Grid item lg={6} md={6} xs={12} className={classes.heroText} data-aos="fade-up" >
                     <Box >
                             <Typography className={classes.textBox}>Great <span style={{ color: 'purple' }}>
                                 <b> Product</b></span> is <span style={{ color: 'purple' }}><b>built by great teams</b></span>
@@ -135,10 +136,9 @@ export const LandingScreen = () => {
                             </Button>
                         </Box>
                     </Grid>
-                    <Grid item lg={6} className={classes.heroText}>
+                    <Grid item lg={6} md={6} xs={12} className={classes.heroText}>
                         <img src={HeroImg} alt='logicImg' />
                     </Grid>
-                </Grid>
 
                 <Divider style={{ backgroundColor: '#E7DAED', width: '100%' }} />
 
@@ -149,8 +149,8 @@ export const LandingScreen = () => {
                     <Box className={classes.serviceCard}>
                         <Grid container spacing={0} >
                             {services.map((cards) =>
-                                <Grid item sm={6} xs={6} md={4}>
-                                    <Box data-aos="flip-right" style={{ display: 'flex', justifyContent: 'center', alignItems: 'cente' }}>
+                                <Grid item sm={6} xs={12} md={4}>
+                                    <Box data-aos="zoom-in" style={{ display: 'flex', justifyContent: 'center', alignItems: 'cente' }}>
                                         <Box className={classes.services} >
                                             <img src={group1} />
                                             <Typography variant="h6" style={{ color: 'purple', fontWeight: '600', paddingTop: '1rem' }}>{cards.title}</Typography>
@@ -165,8 +165,7 @@ export const LandingScreen = () => {
 
                 <Divider style={{ backgroundColor: '#E7DAED', width: '100%', marginTop: '6rem', marginBottom: '6rem' }} />
 
-                <Grid item lg={12} className={classes.heroText} data-aos="fade-up">
-                    <Grid item lg={6} className={classes.heroText}>
+                    <Grid item lg={6} xs={12} md={6} className={classes.heroText} data-aos="fade-up">
                         <Box >
                             <img src={line} />
                             <Typography variant='h6' style={{ lineHeight: '3rem', fontSize: '34px', width: '28rem' }}>Leading companies trust us<b> to develop software</b></Typography>
@@ -177,13 +176,12 @@ export const LandingScreen = () => {
                             </Typography>
                         </Box>
                     </Grid>
-                    <Grid item lg={6} className={classes.heroText} data-aos="flip-right">
+                    <Grid item lg={6} xs={12} md={6}  className={classes.heroText} data-aos="flip-right">
                         <img src={developer} style={{ height: '400px', width: '450px' }} />
                     </Grid>
-                </Grid>
 
-                <Grid item lg={12} >
-                    <Box style={{ paddingLeft: '6rem', paddingTop: '7rem', width: '80%', textAlign: 'justify' }} data-aos="fade-up">
+                <Grid item lg={12} xs={12} md={12} >
+                    <Box style={{ paddingLeft: '6rem', paddingTop: '7rem', width: '70%', textAlign: 'justify' }} data-aos="fade-up">
                         <img src={line} />
                         <Typography variant='h6' style={{ width: '25rem', fontSize: '34px' }}>Meet the People <br /><b>We are Working With</b></Typography>
                         <Typography variant='p' style={{ color: '#4A5568' }}>Crafting the perfect content for the client reviews section of Manasvi Technologies (OPC) Pvt. Ltd.'s company portfolio requires a nuanced
