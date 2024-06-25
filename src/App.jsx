@@ -27,7 +27,10 @@ function App() {
         <Route path="/service" element={<Services/>} /> 
         <Route path="/products" element={<Products/>} /> 
         <Route path="/portfolio" element={<Portfolio/>} /> 
+<<<<<<< HEAD
         <Route path="/contact" element={<ContactUs/>} /> 
+=======
+>>>>>>> 3a56ffabf23b7612bef0716c9f6dbe0494217558
         <Route path="/about-us/about" element={<Aboutus/>}/>
         <Route path="/contact" element={<ContactUs/>} /> 
 {/* <<<<<<< HEAD */}
