@@ -1,23 +1,23 @@
+/* General styles */
 .our-clients {
   padding: 60px 0;
   text-align: center;
-  height: 100vh; /* Full height */
+  height: 100vh;
   width: 100vw;
-  padding: 5px 3px;
-   background: linear-gradient(0deg, #d9e9e8 0, #cfbfda); 
+  background: linear-gradient(0deg, #d9e9e8 0, #cfbfda);
 }
 
 .container {
   max-width: 800px;
   margin: 0 auto;
   padding-bottom: 30px;
-
 }
 
 .section-title {
-  font-size: 2rem;
+  font-size: 1.9rem;
+  margin-top: -25px;
   margin-bottom: 20px;
-  color: purple;
+  color: white;
 }
 
 .section-description {
@@ -54,25 +54,21 @@
 }
 
 .client-slider-container {
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   overflow: hidden;
   width: 100%;
-  height: 300px; /* Adjust as needed */
-}
-
-.client-slider {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-  width: 100%;
-  height: 100%; /* Full height for better alignment */
+  height: 300px;
 }
 
 .client-card {
-  background: #fff;
+  background: whitesmoke;
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   padding: 20px;
-  min-width: 100%;
+  width: 60%; /* Adjusted for medium size */
+  margin: 0 10px; /* Add margin for spacing */
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -90,13 +86,16 @@
   height: 80px;
   border-radius: 50%;
   object-fit: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 15px;
 }
 
 .client-name {
   font-size: 1.3rem;
   margin-bottom: 10px;
-  color: #333;
+  color: purple;
 }
 
 .rating {
@@ -122,6 +121,8 @@
 @media (max-width: 768px) {
   .client-card {
     padding: 15px;
+    width: 80%; /* Adjust for smaller screens */
+    margin: 10px auto; /* Center cards on small screens */
   }
 
   .client-name {

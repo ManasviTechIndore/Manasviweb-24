@@ -67,7 +67,7 @@ const OurClients = () => {
       <section className="our-clients">
         <div className="container">
           <h2 className="section-title">Our Clients</h2>
-          <p className="section-description animated-text">We are proud to have worked with a diverse range of clients.</p>
+          <p className="section-description animated-text">We are proud to have worked with a diverse range of clients.And delever the new cutting age technology products.</p>
           <div className="client-slider-container">
             <div className="client-card">
               <div className="client-info">
