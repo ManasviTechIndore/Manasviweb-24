@@ -27,7 +27,7 @@ const useStyles = makeStyles(() => ({
     },
   },
   contactBtn: {
-    backgroundImage: `linear-gradient(to right, rgba(87, 0, 123, 1), rgba(102, 117, 247, 1))`,
+    backgroundImage: 'linear-gradient(to right, rgba(87, 0, 123, 1), rgba(102, 117, 247, 1))',
     color: 'white',
     marginRight: '20px',
     '@media (max-width: 768px)': {
@@ -56,56 +56,54 @@ const useStyles = makeStyles(() => ({
 }));
 
 export const Header = () => {
-    const [showHamburger, setHamburger] = useState(false);    
-    const classes = useStyles();
-    return (
-        <Box>
-            <Grid container className={classes.nav} >
-                <Grid item lg={2} md={2} xs={2} >
-                    <Box style={{ display: 'flex', justifyContent: 'center', paddingLeft: '2rem' }}>
-                        <img src={Logo} alt='logo' style={{ paddingRight: '5px',height:'60px' }} />
-                    </Box>
-                </Grid>
-                <Grid item lg={8} md={8} xs={8}>
-                    <Box className={classes.menu} >
-                    <Link to="/">
-                        <Typography component="h6" style={{fontWeight:'bold',color:'black'}}>Home</Typography>
-                    </Link>    
-                    <Link to="/service">
-                        <Typography component="h6" style={{fontWeight:'bold',color:'black'}}>Services</Typography>
-                        </Link>
-                    <Link to="/products">
-                        <Typography component="h6" style={{fontWeight:'bold',color:'black'}}>Products</Typography>
-                    </Link>    
-                        <Typography component="h6" style={{fontWeight:'bold',color:'black'}}>OurTeam</Typography>
-                        <Typography component="h6" style={{fontWeight:'bold',color:'black'}}>Clients</Typography>
-                    <Link to="/portfolio">
-                        <Typography component="h6" style={{fontWeight:'bold',color:'black'}}>Portfolio</Typography>
-                    </Link>
-                   <Link to ='/schedule-meeting'>
-                   <Typography component="h6" style={{fontWeight:'bold',color:'black'}}>Schedule Meeting</Typography>
-                   </Link>
-                        
-                        <Typography component="h6" style={{fontWeight:'bold'}}>About Us</Typography>
-                    </Box>
-                </Grid>
-                <Grid item lg={2} md={2} xs={2}>
-                    <Box style={{ display: 'flex', justifyContent: 'end'}}>
-                        <Button className={classes.contactBtn}>
-                            <Link to="">
-                             <Typography style={{textTransform:'capitalize',fontSize:'15px',color:'white'}}>Contact us</Typography>
-                             </Link>
-                        </Button>
-                        <Box className={classes.hamburger}>
-                            <a href='#' onClick={()=>{setHamburger(!showHamburger)
-                                console.log(showHamburger)
-                            }}>
-                            <img style={{height:"45px"}} src={Hamburger} alt="hamburger"/>
-                            </a>
-                        </Box>
-                    </Box>
-                </Grid>
-            </Grid>
+  const [showHamburger, setHamburger] = useState(false);    
+  const classes = useStyles();
+
+  return (
+    <Box>
+      <Grid container className={classes.nav}>
+        <Grid item lg={2} md={2} xs={2}>
+          <Box style={{ display: 'flex', justifyContent: 'center', paddingLeft: '2rem' }}>
+            <img src={Logo} alt='logo' style={{ paddingRight: '5px', height: '60px' }} />
+          </Box>
+        </Grid>
+        <Grid item lg={8} md={8} xs={8}>
+          <Box className={classes.menu}>
+            <Link to="/">
+              <Typography component="h6" style={{ fontWeight: 'bold', color: 'black' }}>Home</Typography>
+            </Link>    
+            <Link to="/service">
+              <Typography component="h6" style={{ fontWeight: 'bold', color: 'black' }}>Services</Typography>
+            </Link>
+            <Link to="/products">
+              <Typography component="h6" style={{ fontWeight: 'bold', color: 'black' }}>Products</Typography>
+            </Link>    
+            <Typography component="h6" style={{ fontWeight: 'bold', color: 'black' }}>Our Team</Typography>
+            <Typography component="h6" style={{ fontWeight: 'bold', color: 'black' }}>Clients</Typography>
+            <Link to="/portfolio">
+              <Typography component="h6" style={{ fontWeight: 'bold', color: 'black' }}>Portfolio</Typography>
+            </Link>
+            <Link to="/schedule-meeting">
+              <Typography component="h6" style={{ fontWeight: 'bold', color: 'black' }}>Schedule Meeting</Typography>
+            </Link>
+            <Typography component="h6" style={{ fontWeight: 'bold', color: 'black' }}>About Us</Typography>
+          </Box>
+        </Grid>
+        <Grid item lg={2} md={2} xs={2}>
+          <Box style={{ display: 'flex', justifyContent: 'end' }}>
+            <Button className={classes.contactBtn}>
+              <Link to="/contact">
+                <Typography style={{ textTransform: 'capitalize', fontSize: '15px', color: 'white' }}>Contact us</Typography>
+              </Link>
+            </Button>
+            <Box className={classes.hamburger}>
+              <a href='#' onClick={() => { setHamburger(!showHamburger); console.log(showHamburger); }}>
+                <img style={{ height: "45px" }} src={Hamburger} alt="hamburger" />
+              </a>
+            </Box>
+          </Box>
+        </Grid>
+      </Grid>
 
       {/* Mobile menu */}
       <Box style={{ display: 'grid', justifyContent: 'end' }}>
@@ -119,12 +117,12 @@ export const Header = () => {
           <Link to="/products">
             <Typography component="h6" style={{ fontWeight: 'bold', color: 'black' }}>Products</Typography>
           </Link>
-          <Typography component="h6" style={{ fontWeight: 'bold', color: 'black' }}>OurTeam</Typography>
+          <Typography component="h6" style={{ fontWeight: 'bold', color: 'black' }}>Our Team</Typography>
           <Typography component="h6" style={{ fontWeight: 'bold', color: 'black' }}>Clients</Typography>
           <Link to="/portfolio">
             <Typography component="h6" style={{ fontWeight: 'bold', color: 'black' }}>Portfolio</Typography>
           </Link>
-          <Link to='/schedule-meeting'>
+          <Link to="/schedule-meeting">
             <Typography component="h6" style={{ fontWeight: 'bold', color: 'black' }}>Schedule Meeting</Typography>
           </Link>
           <Typography component="h6" style={{ fontWeight: 'bold', color: 'black' }}>About Us</Typography>
