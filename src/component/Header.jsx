@@ -1,4 +1,4 @@
-import { Box, Button, Grid, Typography } from '@material-ui/core';
+import {Box, Button, Grid, Typography} from "@material-ui/core";
 import Logo from "../images/logo.png";
 import Hamburger from "../assets/hamburger.png";
 import { makeStyles } from '@material-ui/core/styles';
