@@ -58,10 +58,10 @@ const useStyles = makeStyles(() => ({
 ));
 
 export const Header = () => {
-  <<<<<<< HEAD
+  
   const [showHamburger, setHamburger] = useState(false);    
   const classes = useStyles();
-{/* >>>>>>> 3a56ffabf23b7612bef0716c9f6dbe0494217558 */}
+
 
   return (
     <Box>
