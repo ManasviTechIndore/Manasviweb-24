@@ -5,7 +5,8 @@ import { Button, Card, CardActions, CardContent, CardMedia, Divider } from '@mui
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { Footer } from '../component/Footer'
-import { portfolio } from '../Data'
+import { portfolios } from '../Data'
+import { useNavigate } from 'react-router-dom';
 
 const useStyles = makeStyles(() => ({
     title: {
@@ -25,9 +26,15 @@ const useStyles = makeStyles(() => ({
 
 const Portfolio = () => {
     const classes = useStyles();
+    const navigate = useNavigate();
     useEffect(() => {
         AOS.init({ duration: 2000 });
     }, []);
+
+        // Redirecting to product details page 
+        const handleMoreDetails = (id) => {
+            navigate(`/portfolios/${id}`);
+        }
     return (
         <>
         <Header />
@@ -37,7 +44,7 @@ const Portfolio = () => {
         </Box>
         <Grid container spacing={0}>
 
-            {portfolio.map((card) => {
+            {portfolios.map((card) => {
                 return (
                     <Grid item lg={6} md={6} xs={12} data-aos="zoom-in" >
                         <Box className={classes.card}>
@@ -57,7 +64,7 @@ const Portfolio = () => {
                                     </Typography>
                                 </CardContent>
                                 <CardActions>
-                                    <Button size="small">More Details</Button>
+                                    <Button size="small" onClick={() => handleMoreDetails(card.id)}>More Details</Button>
                                 </CardActions>
                             </Card>
                         </Box>

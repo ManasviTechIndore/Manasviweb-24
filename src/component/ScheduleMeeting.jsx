@@ -151,7 +151,7 @@ const ScheduleMeeting = () => {
                   <Box >
                     <label htmlFor="meetingDescription" >Description</label>
                     <TextField
-                      fullWidth placeholder="Description"
+                      fullWidth 
                       multiline
                       id="meetingDescription"
                       name="meetingDescription"
@@ -164,7 +164,7 @@ const ScheduleMeeting = () => {
                     type="submit"
                     style={{
                       textTransform: 'capitalize', fontSize: '15px', color: 'white',
-                      backgroundImage: `linear-gradient(to right, rgba(87, 0, 123, 1),rgba(102, 117, 247, 1))`,
+                      backgroundImage: "linear-gradient(to right, rgba(87, 0, 123, 1),rgba(102, 117, 247, 1))",
                       color: 'white', marginBottom: '20px',
                       marginTop: '30px'
                     }}

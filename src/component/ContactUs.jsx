@@ -1,15 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import emailjs from 'emailjs-com';
-// <<<<<<< HEAD
-import styled from 'styled-components';
+
 import toast, { Toaster } from 'react-hot-toast';
-// =======
-//import toast, { Toaster } from 'react-hot-toast';
+
 import { motion } from 'framer-motion';
 import { Header } from './Header';
 import { Footer } from './Footer';
 import { Box, Button, Grid, TextField } from '@mui/material';
-// >>>>>>> 3a56ffabf23b7612bef0716c9f6dbe0494217558
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
@@ -22,7 +19,7 @@ const ContactUs = () => {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      // Animate in the content after 500ms
+     
       setAnimate(true);
     }, 500);
     return () => clearTimeout(timer);
@@ -127,7 +124,7 @@ const ContactUs = () => {
                   type="submit"
                   style={{
                     textTransform: 'capitalize', fontSize: '15px', color: 'white',
-                    backgroundImage: `linear-gradient(to right, rgba(87, 0, 123, 1),rgba(102, 117, 247, 1))`,
+                    backgroundImage: "linear-gradient(to right, rgba(87, 0, 123, 1),rgba(102, 117, 247, 1))",
                     color: 'white', marginBottom: '20px',
                     marginTop: '30px'
                   }}
@@ -147,4 +144,4 @@ const ContactUs = () => {
   );
 };
 
-export default ContactUs;
+export default ContactUs;

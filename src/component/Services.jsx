@@ -6,6 +6,8 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { Footer } from '../component/Footer'
 import { services } from '../Data'
+import { useNavigate } from 'react-router-dom';
+
 
 const useStyles = makeStyles(() => ({
     title: {
@@ -25,9 +27,16 @@ const useStyles = makeStyles(() => ({
 
 const Services = () => {
     const classes = useStyles();
+    const navigate = useNavigate();
+    
     useEffect(() => {
         AOS.init({ duration: 2000 });
     }, []);
+
+    // Redirecting to services details page 
+    const handleMoreDetails = (id) => {
+        navigate(`/services/${id}`);
+    }
     return (
         <>
             <Header />
@@ -57,7 +66,7 @@ const Services = () => {
                                         </Typography>
                                     </CardContent>
                                     <CardActions>
-                                        <Button size="small">More Details</Button>
+                                        <Button size="small" onClick={() => handleMoreDetails(card.id)}>More Details</Button>
                                     </CardActions>
                                 </Card>
                             </Box>
