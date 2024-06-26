@@ -81,9 +81,14 @@ export const Header = () => {
             </Link>
             <Link to="/products">
               <Typography component="h6" style={{ fontWeight: 'bold', color: 'black' }}>Products</Typography>
-            </Link>    
+            </Link>  
+            <Link to="/ourteam">
             <Typography component="h6" style={{ fontWeight: 'bold', color: 'black' }}>Our Team</Typography>
+            </Link>  
+            <Link to="/clients">
             <Typography component="h6" style={{ fontWeight: 'bold', color: 'black' }}>Clients</Typography>
+            </Link>
+           
             <Link to="/portfolio">
               <Typography component="h6" style={{ fontWeight: 'bold', color: 'black' }}>Portfolio</Typography>
             </Link>
@@ -123,8 +128,12 @@ export const Header = () => {
           <Link to="/products">
             <Typography component="h6" style={{ fontWeight: 'bold', color: 'black' }}>Products</Typography>
           </Link>
+          <Link to="/ourteam">
           <Typography component="h6" style={{ fontWeight: 'bold', color: 'black' }}>Our Team</Typography>
+          </Link>
+          <Link to="/clients">
           <Typography component="h6" style={{ fontWeight: 'bold', color: 'black' }}>Clients</Typography>
+          </Link>
           <Link to="/portfolio">
             <Typography component="h6" style={{ fontWeight: 'bold', color: 'black' }}>Portfolio</Typography>
           </Link>
