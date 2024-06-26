@@ -12,18 +12,24 @@ import Aboutus from "./component/about-us/Aboutus"
 
 import ScheduleMeeting from "./component/ScheduleMeeting"
 import Products from "./pages/Products"
+import ServiceDetails from "./component/ServiceDetails"
+import ProductDetails from "./pages/ProductDetails"
+import PortfolioDetails from "./component/PortfolioDetails"
 
 
 function App() {
  
-  return (
+  return (  
    <>
    <Router>
       <Routes>     
         <Route path="/" element={<LandingScreen/>} /> 
         <Route path="/service" element={<Services/>} /> 
+        <Route path="/services/:id" element={<ServiceDetails/>} />
         <Route path="/products" element={<Products/>} /> 
+        <Route path="/products/:id" element={<ProductDetails/>} /> 
         <Route path="/portfolio" element={<Portfolio/>} /> 
+        <Route path="/portfolios/:id" element={<PortfolioDetails/>} /> 
  
 
         <Route path="/about-us/about" element={<Aboutus/>}/>

@@ -1,7 +1,6 @@
 import React, {useEffect} from "react";
 import {Header} from "../Header";
 import {Container, Grid, Box, Typography, Button, Card, CardContent} from "@material-ui/core";
-import {makeStyles} from "@material-ui/core/styles";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import line from "../../assets/aboutus-images/Deco-line.png";
@@ -10,6 +9,7 @@ import visionImage from "../../assets/aboutus-images/icons8-vision-64.png";
 import missionImage from "../../assets/aboutus-images/icons8-mission-48.png";
 import valueImage from "../../assets/aboutus-images/icons8-value-48.png";
 import aboutStyles from "./aboutStyles"; // Import the styles
+import { Footer } from "../Footer";
 
 const Aboutus = () => {
     const classes = aboutStyles();
@@ -201,6 +201,7 @@ const Aboutus = () => {
                     </Grid>
                 </Container>
             </Box>
+            <Footer/>
         </>
     );
 };
