@@ -111,36 +111,36 @@ export const Header = () => {
                 </Grid>
             </Grid>
 
-            {/* mobile menu */}
-            <Box style={{ display: 'grid', justifyContent: 'end' }}>
-                <Box className={showHamburger ? classes.mobileMenu : classes.mobileMenuable} >
-                    <Link to="/">
-                        <Typography component="h6" style={{ fontWeight: 'bold', color: 'black' }}>Home</Typography>
-                    </Link>
-                    <Link to="/service">
-                        <Typography component="h6" style={{ fontWeight: 'bold', color: 'black' }}>Services</Typography>
-                    </Link>
-                    <Link to="/products">
-                        <Typography component="h6" style={{ fontWeight: 'bold', color: 'black' }}>Products</Typography>
-                    </Link>
-                    <Typography component="h6" style={{ fontWeight: 'bold', color: 'black' }}>OurTeam</Typography>
-                    <Typography component="h6" style={{ fontWeight: 'bold', color: 'black' }}>Clients</Typography>
-                    <Link to="/portfolio">
-                        <Typography component="h6" style={{ fontWeight: 'bold', color: 'black' }}>Portfolio</Typography>
-                    </Link>
-                    <Typography component="h6" style={{ fontWeight: 'bold', color: 'black' }}>Schedule Meeting</Typography>
-                    <Typography component="h6" style={{ fontWeight: 'bold', color: 'black' }}>About Us</Typography>
-                    <Link to="/contact">
-                        <Typography style={{ fontWeight: 'bold', color: 'black' }}>Contact us</Typography>
-                    </Link>
-                    {/* <Button className={classes.contactBtn}>
-                            <Link to="/contact">
-                             <Typography  style={{textTransform:'capitalize',fontSize:'15px',color:'white'}}>Contact us</Typography>
-                             </Link>
-                    </Button> */}
-                </Box>
-            </Box>
+      {/* Mobile menu */}
+      <Box style={{ display: 'grid', justifyContent: 'end' }}>
+        <Box className={showHamburger ? classes.mobileMenu : classes.mobileMenuable}>
+          <Link to="/">
+            <Typography component="h6" style={{ fontWeight: 'bold', color: 'black' }}>Home</Typography>
+          </Link>
+          <Link to="/service">
+            <Typography component="h6" style={{ fontWeight: 'bold', color: 'black' }}>Services</Typography>
+          </Link>
+          <Link to="/products">
+            <Typography component="h6" style={{ fontWeight: 'bold', color: 'black' }}>Products</Typography>
+          </Link>
+          <Typography component="h6" style={{ fontWeight: 'bold', color: 'black' }}>Our Team</Typography>
+          <Typography component="h6" style={{ fontWeight: 'bold', color: 'black' }}>Clients</Typography>
+          <Link to="/portfolio">
+            <Typography component="h6" style={{ fontWeight: 'bold', color: 'black' }}>Portfolio</Typography>
+          </Link>
+          <Link to="/schedule-meeting">
+            <Typography component="h6" style={{ fontWeight: 'bold', color: 'black' }}>Schedule Meeting</Typography>
+          </Link>
+          <Link to="/about-us/about">
+          <Typography component="h6" style={{ fontWeight: 'bold', color: 'black' }}>About Us</Typography>
+          </Link>
+          <Link to="/contact">
+            <Button className={classes.contactBtn}>
+              <Typography style={{ textTransform: 'capitalize', fontSize: '15px', color: 'white' }}>Contact us</Typography>
+            </Button>
+          </Link>
         </Box>
-    )
-}
-
+      </Box>
+    </Box>
+  );
+};

@@ -1,9 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import emailjs from 'emailjs-com';
+// <<<<<<< HEAD
+import styled from 'styled-components';
 import toast, { Toaster } from 'react-hot-toast';
+// =======
+//import toast, { Toaster } from 'react-hot-toast';
 import { motion } from 'framer-motion';
 import { Header } from './Header';
 import { Footer } from './Footer';
+// >>>>>>> 3a56ffabf23b7612bef0716c9f6dbe0494217558
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({

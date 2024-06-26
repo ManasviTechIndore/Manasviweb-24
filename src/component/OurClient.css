@@ -1,0 +1,140 @@
+/* General styles */
+.our-clients {
+  padding: 60px 0;
+  text-align: center;
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(0deg, #d9e9e8 0, #cfbfda);
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding-bottom: 30px;
+}
+
+.section-title {
+  font-size: 1.9rem;
+  margin-top: -25px;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.section-description {
+  font-size: 1.2rem;
+  color: purple;
+  margin-bottom: 30px;
+}
+
+.animated-text {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid #3498db;
+  animation: typing 4s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #3498db;
+  }
+}
+
+.client-slider-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  width: 100%;
+  height: 300px;
+}
+
+.client-card {
+  background: whitesmoke;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  width: 60%; /* Adjusted for medium size */
+  margin: 0 10px; /* Add margin for spacing */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.client-info {
+  padding-bottom: 15px;
+}
+
+.client-logo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.client-name {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: purple;
+}
+
+.rating {
+  margin-bottom: 10px;
+}
+
+.rating .star {
+  font-size: 1.5rem;
+  color: #ddd;
+}
+
+.rating .star-filled {
+  color: #FDCC0D; /* Yellow color for filled stars */
+}
+
+.testimonial {
+  font-size: 1rem;
+  color: #777;
+  line-height: 1.6;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .client-card {
+    padding: 15px;
+    width: 80%; /* Adjust for smaller screens */
+    margin: 10px auto; /* Center cards on small screens */
+  }
+
+  .client-name {
+    font-size: 1.1rem;
+  }
+
+  .rating .star,
+  .rating .star-filled {
+    font-size: 1.3rem;
+  }
+
+  .testimonial {
+    font-size: 0.9rem;
+  }
+}
