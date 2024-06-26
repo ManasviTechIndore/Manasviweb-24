@@ -1,4 +1,4 @@
-import {Box, Button, Grid, Typography} from "@material-ui/core";
+import { Box, Button, Grid, Typography } from "@material-ui/core";
 import Logo from "../images/logo.png";
 import Hamburger from "../assets/hamburger.png";
 import { makeStyles } from '@material-ui/core/styles';
@@ -10,10 +10,9 @@ const useStyles = makeStyles(() => ({
         display: 'flex',
         alignItems: 'center',
         height: '4rem',
-        // width: '100%',
+        // width: '100% !important',
         boxShadow: '10px 10px 10px rgba(0, 0, 0, 0.1)',
         top: '0px',
-        backgroundColor: 'white'
     },
     menu: {
         display: 'flex',
@@ -79,8 +78,12 @@ export const Header = () => {
                         <Link to="/products">
                             <Typography component="h6" style={{ fontWeight: 'bold', color: 'black' }}>Products</Typography>
                         </Link>
-                        <Typography component="h6" style={{ fontWeight: 'bold', color: 'black' }}>OurTeam</Typography>
-                        <Typography component="h6" style={{ fontWeight: 'bold', color: 'black' }}>Clients</Typography>
+                        <Link to="/ourteam">
+                            <Typography component="h6" style={{ fontWeight: 'bold', color: 'black' }}>OurTeam</Typography>
+                        </Link>
+                        <Link to="/clients">
+                            <Typography component="h6" style={{ fontWeight: 'bold', color: 'black' }}>Clients</Typography>
+                        </Link>
                         <Link to="/portfolio">
                             <Typography component="h6" style={{ fontWeight: 'bold', color: 'black' }}>Portfolio</Typography>
                         </Link>
@@ -88,7 +91,7 @@ export const Header = () => {
                             <Typography component="h6" style={{ fontWeight: 'bold', color: 'black' }}>Schedule Meeting</Typography>
                         </Link>
                         <Link to='/about-us/about'>
-                        <Typography component="h6" style={{ fontWeight: 'bold', color: 'black'  }}>About Us</Typography>
+                            <Typography component="h6" style={{ fontWeight: 'bold', color: 'black' }}>About Us</Typography>
                         </Link>
                     </Box>
                 </Grid>
@@ -111,36 +114,43 @@ export const Header = () => {
                 </Grid>
             </Grid>
 
-      {/* Mobile menu */}
-      <Box style={{ display: 'grid', justifyContent: 'end' }}>
-        <Box className={showHamburger ? classes.mobileMenu : classes.mobileMenuable}>
-          <Link to="/">
-            <Typography component="h6" style={{ fontWeight: 'bold', color: 'black' }}>Home</Typography>
-          </Link>
-          <Link to="/service">
-            <Typography component="h6" style={{ fontWeight: 'bold', color: 'black' }}>Services</Typography>
-          </Link>
-          <Link to="/products">
-            <Typography component="h6" style={{ fontWeight: 'bold', color: 'black' }}>Products</Typography>
-          </Link>
-          <Typography component="h6" style={{ fontWeight: 'bold', color: 'black' }}>Our Team</Typography>
-          <Typography component="h6" style={{ fontWeight: 'bold', color: 'black' }}>Clients</Typography>
-          <Link to="/portfolio">
-            <Typography component="h6" style={{ fontWeight: 'bold', color: 'black' }}>Portfolio</Typography>
-          </Link>
-          <Link to="/schedule-meeting">
-            <Typography component="h6" style={{ fontWeight: 'bold', color: 'black' }}>Schedule Meeting</Typography>
-          </Link>
-          <Link to="/about-us/about">
-          <Typography component="h6" style={{ fontWeight: 'bold', color: 'black' }}>About Us</Typography>
-          </Link>
-          <Link to="/contact">
+            {/* Mobile menu */}
+            <Box style={{ display: 'grid', justifyContent: 'end' }}>
+                <Box className={showHamburger ? classes.mobileMenu : classes.mobileMenuable}>
+                    <Link to="/">
+                        <Typography component="h6" style={{ fontWeight: 'bold', color: 'black' }}>Home</Typography>
+                    </Link>
+                    <Link to="/service">
+                        <Typography component="h6" style={{ fontWeight: 'bold', color: 'black' }}>Services</Typography>
+                    </Link>
+                    <Link to="/products">
+                        <Typography component="h6" style={{ fontWeight: 'bold', color: 'black' }}>Products</Typography>
+                    </Link>
+                    <Link to="/ourteam">
+                        <Typography component="h6" style={{ fontWeight: 'bold', color: 'black' }}>Our Team</Typography>
+                    </Link>
+                    <Link to="/clients">
+                        <Typography component="h6" style={{ fontWeight: 'bold', color: 'black' }}>Clients</Typography>
+                    </Link>
+                    <Link to="/portfolio">
+                        <Typography component="h6" style={{ fontWeight: 'bold', color: 'black' }}>Portfolio</Typography>
+                    </Link>
+                    <Link to="/schedule-meeting">
+                        <Typography component="h6" style={{ fontWeight: 'bold', color: 'black' }}>Schedule Meeting</Typography>
+                    </Link>
+                    <Link to="/about-us/about">
+                        <Typography component="h6" style={{ fontWeight: 'bold', color: 'black' }}>About Us</Typography>
+                    </Link>
+                    <Link to="/contact">
+                        <Typography style={{ fontWeight: 'bold', color: 'black' }}>Contact us</Typography>
+                    </Link>
+                    {/* <Link to="/contact">
             <Button className={classes.contactBtn}>
               <Typography style={{ textTransform: 'capitalize', fontSize: '15px', color: 'white' }}>Contact us</Typography>
             </Button>
-          </Link>
+          </Link> */}
+                </Box>
+            </Box>
         </Box>
-      </Box>
-    </Box>
-  );
+    );
 };
