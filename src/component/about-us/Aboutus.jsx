@@ -140,7 +140,7 @@ const Aboutus = () => {
                         Why Choose Us
                     </Typography>
                     <Grid container spacing={3}>
-                        <Grid item lg={6} md={6} sm={6} data-aos="fade-right">
+                        <Grid item lg={6} md={6} sm={6} data-aos="zoom-in">
                             <Card className={classes.card}>
                                 <CardContent>
                                     <Typography variant="h6" className={classes.cardTitle}>
@@ -154,7 +154,7 @@ const Aboutus = () => {
                                 </CardContent>
                             </Card>
                         </Grid>
-                        <Grid item lg={6} md={6} sm={6} data-aos="fade-left">
+                        <Grid item lg={6} md={6} sm={6} data-aos="zoom-in">
                             <Card className={classes.card}>
                                 <CardContent>
                                     <Typography variant="h6" className={classes.cardTitle}>
@@ -168,7 +168,7 @@ const Aboutus = () => {
                                 </CardContent>
                             </Card>
                         </Grid>
-                        <Grid item lg={6} md={6} sm={6} data-aos="fade-right">
+                        <Grid item lg={6} md={6} sm={6} data-aos="zoom-in">
                             <Card className={classes.card}>
                                 <CardContent>
                                     <Typography variant="h6" className={classes.cardTitle}>
@@ -183,7 +183,7 @@ const Aboutus = () => {
                                 </CardContent>
                             </Card>
                         </Grid>
-                        <Grid item lg={6} md={6} sm={6} data-aos="fade-left">
+                        <Grid item lg={6} md={6} sm={6} data-aos="zoom-in">
                             <Card className={classes.card}>
                                 <CardContent>
                                     <Typography variant="h6" className={classes.cardTitle}>

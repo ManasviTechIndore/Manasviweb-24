@@ -49,7 +49,7 @@ const servicDetailsStyles = makeStyles((theme) => ({
         fontSize: responsiveFontSize(20, 38),
         fontWeight: 'bold',
         position: 'relative', // To ensure it appears above the overlay
-        translate: '0  150%',
+        transform: 'translateY(250%)',
         zIndex: 2, // Ensure text is above the overlay
         [theme.breakpoints.down('sm')]: {
             fontSize: responsiveFontSize(22, 38),
