@@ -1,85 +1,88 @@
-import React, { useEffect } from 'react'
-import { Header } from '../component/Header'
-import { Box, Grid, Typography, makeStyles } from '@material-ui/core'
-import { Button, Card, CardActions, CardContent, CardMedia, Divider } from '@mui/material'
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-import { Footer } from '../component/Footer'
-import { services } from '../Data'
-import { useNavigate } from 'react-router-dom';
-
-
-const useStyles = makeStyles(() => ({
-    title: {
-        marginTop: '50px',
-        display: 'grid',
-        justifyContent: 'center',
-        alignItems: 'center'
-
-    },
-    card: {
-        marginTop: '50px',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center'
-    }
-}));
+import React, {useEffect} from "react";
+import {Header} from "../component/Header";
+import {Box, Container, Grid, Typography, makeStyles} from "@material-ui/core";
+import {Button, Card, CardActions, CardContent, CardMedia, Divider} from "@mui/material";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import {Footer} from "../component/Footer";
+import {services} from "../Data";
+import {useNavigate} from "react-router-dom";
+import servicesStyles from "../styles/servicesStyles"; // Import the styles
 
 const Services = () => {
-    const classes = useStyles();
+    const classes = servicesStyles();
     const navigate = useNavigate();
-    
+
     useEffect(() => {
-        AOS.init({ duration: 2000 });
+        AOS.init({duration: 2000});
     }, []);
 
-    // Redirecting to services details page 
+    // Redirecting to services details page
     const handleMoreDetails = (id) => {
         navigate(`/services/${id}`);
-    }
+    };
     return (
         <>
             <Header />
-            <Box className={classes.title}>
-                <Typography variant='h3' style={{ color: 'purple' }}>Our Services</Typography>
-                <Divider style={{ backgroundColor: 'purple', height: '2px' }} />
-            </Box>
-            <Grid container spacing={0}>
-
-                {services.map((card) => {
-                    return (
-                        <Grid item lg={6} md={6} xs={12} data-aos="zoom-in" >
-                            <Box className={classes.card}>
-                                <Card sx={{ maxWidth: 450, minHeight: 345 }}>
-                                    <CardMedia
-                                        component="img"
-                                        alt="green iguana"
-                                        height="140"
-                                        image={card.image}
-                                    />
-                                    <CardContent>
-                                        <Typography gutterBottom variant="h5" component="div">
-                                            {card.title}
-                                        </Typography>
-                                        <Typography variant="body2" color="text.secondary">
-                                            {card.subTitle}
-                                        </Typography>
-                                    </CardContent>
-                                    <CardActions>
-                                        <Button size="small" onClick={() => handleMoreDetails(card.id)}>More Details</Button>
-                                    </CardActions>
-                                </Card>
-                            </Box>
-                        </Grid>
-                    )
-                })}
-            </Grid>
-            <Box style={{ marginTop: '50px' }}>
-                <Footer />
-
+            <Box className={classes.ourservicesBoxContainer}>
+                <Box className={classes.ourServicesHeroSection}>
+                    <Typography variant="h3" className={classes.ourseviceHeroTitle}>
+                        Our Services
+                    </Typography>
+                </Box>
+                <Container maxWidth="lg">
+                    <Grid container spacing={4}>
+                        {services.map((card) => {
+                            return (
+                                <Grid item lg={4} md={6} sm={6} xs={12} data-aos="zoom-in" key={card.id}>
+                                    <Box className={classes.card}>
+                                        <Card className={classes.serviceCard}>
+                                            <CardMedia
+                                                component="img"
+                                                alt="Service Image"
+                                                image={card.image}
+                                                className={classes.serviceCardMedia}
+                                            />
+                                            <CardContent>
+                                                <Typography
+                                                    gutterBottom
+                                                    variant="h5"
+                                                    component="div"
+                                                    className={classes.cardTitle}
+                                                >
+                                                    {card.title}
+                                                </Typography>
+                                                <Typography
+                                                    variant="body2"
+                                                    color="text.secondary"
+                                                    className={classes.cardsubTitle}
+                                                >
+                                                    {card.subTitle}
+                                                </Typography>
+                                            </CardContent>
+                                            <CardActions className={classes.cardActions}>
+                                                <Button
+                                                    variant="contained"
+                                                    size="small"
+                                                    onClick={() => handleMoreDetails(card.id)}
+                                                    className={classes.moreDetailsBtn}
+                                                >
+                                                    More Details
+                                                </Button>
+                                            </CardActions>
+                                        </Card>
+                                    </Box>
+                                </Grid>
+                            );
+                        })}
+                    </Grid>
+                </Container>
+                <Box style={{marginTop: "50px"}}>
+                    <Footer />
+                </Box>
             </Box>
         </>
-    )
-}
+    );
+};
 
-export default Services
+export default Services;
