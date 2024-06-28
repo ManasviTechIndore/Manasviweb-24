@@ -16,7 +16,10 @@
     const aboutStyles = makeStyles((theme) => ({
         // About us styles
         aboutusBox: {
-            backgroundImage: "linear-gradient(0deg, #d9e9e8 0, #cfbfda)",
+            // backgroundImage: "linear-gradient(0deg, #d9e9e8 0, #cfbfda)",
+            // backgroundImage: "linear-gradient(to right, #9c27b0 0, #673ab7 100%)",
+            backgroundImage: "linear-gradient(90deg, rgba(184, 182, 228, 1) 0%, rgba(148, 80, 199, 1) 25%, rgba(226, 2, 184, 1) 70%, rgba(85, 67, 181, 1) 100%, rgba(50, 165, 195, 1) 100%, rgba(201, 96, 236, 1) 100%)",
+
             backgroundSize: "cover",
             backgroundPosition: "center",
             paddingBlock: responsivePadding(24, 48),
@@ -31,13 +34,15 @@
             margin: responsiveMargin(16, 32), // Example usage for margin
         },
         aboutUscontent: {
+            color: "white",
             textAlign: "left",
             maxWidth: "37.5rem",
         },
         aboutUstitle: {
             marginBlockEnd: responsiveMargin(16, 24), // Example usage for margin
-            color: "purple",
-            fontSize: responsiveFontSize(20, 36),
+            color: "white",
+            fontSize: responsiveFontSize(20, 46),
+            fontWeight: 700,
         },
         aboutUsdescription: {
             marginBlockEnd: responsiveMargin(16, 24), // Example usage for margin
