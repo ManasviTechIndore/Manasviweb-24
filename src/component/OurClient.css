@@ -1,16 +1,22 @@
 /* General styles */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
 .our-clients {
   padding: 60px 0;
   text-align: center;
-  height: 100vh;
-  width: 100vw;
   background: linear-gradient(0deg, #d9e9e8 0, #cfbfda);
+  width: 100%;
 }
 
 .container {
-  max-width: 800px;
+  max-width: 1300px;
   margin: 0 auto;
-  padding-bottom: 30px;
+  padding: 0 15px; /* Added padding for better responsiveness */
 }
 
 .section-title {
@@ -31,16 +37,7 @@
   overflow: hidden;
   white-space: nowrap;
   border-right: 2px solid #3498db;
-  animation: typing 4s steps(40, end), blink-caret 0.75s step-end infinite;
-}
-
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
+  animation: blink-caret 0.75s step-end infinite;
 }
 
 @keyframes blink-caret {
@@ -53,47 +50,49 @@
   }
 }
 
-.client-slider-container {
+.client-cards {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  width: 100%;
-  height: 300px;
+  gap: 20px; /* Added gap for better spacing */
+  padding: 0 15px; /* Added padding for better responsiveness */
 }
 
+/* Responsive client cards */
 .client-card {
   background: whitesmoke;
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  padding: 20px;
-  width: 60%; /* Adjusted for medium size */
-  margin: 0 10px; /* Add margin for spacing */
-  height: 100%;
+  padding: 15px;
+  flex: 1 1 calc(33.33% - 40px); /* Default to 3 cards per row */
+  max-width: calc(33.33% - 40px);
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  margin-bottom: 20px;
+}
+
+.client-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
 .client-info {
-  padding-bottom: 15px;
+  padding-bottom: 10px;
 }
 
 .client-logo {
-  width: 80px;
-  height: 80px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
   object-fit: cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .client-name {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   margin-bottom: 10px;
   color: purple;
 }
@@ -103,7 +102,7 @@
 }
 
 .rating .star {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   color: #ddd;
 }
 
@@ -112,29 +111,42 @@
 }
 
 .testimonial {
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: #777;
-  line-height: 1.6;
+  line-height: 1.4;
 }
 
-/* Responsive adjustments */
+/* Responsive adjustments for various screen sizes */
+@media (max-width: 1024px) {
+  .client-card {
+    flex: 1 1 calc(50% - 40px); /* 2 cards per row */
+    max-width: calc(50% - 40px);
+  }
+}
+
 @media (max-width: 768px) {
   .client-card {
-    padding: 15px;
-    width: 80%; /* Adjust for smaller screens */
-    margin: 10px auto; /* Center cards on small screens */
+    flex: 1 1 calc(100% - 30px); /* 1 card per row */
+    max-width: calc(100% - 30px);
   }
 
   .client-name {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 
   .rating .star,
   .rating .star-filled {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
   }
 
   .testimonial {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .client-card {
+    flex: 2 2 100%; /* 1 card per row */
+    max-width: 100%;
   }
 }

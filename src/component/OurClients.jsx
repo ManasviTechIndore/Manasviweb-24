@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './OurClient.css'; // Import the CSS file for styling
 import { Header } from './Header';
 import { Footer } from './Footer';
@@ -49,45 +49,34 @@ const clients = [
 ];
 
 const OurClients = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex(prevIndex => (prevIndex === clients.length - 1 ? 0 : prevIndex + 1));
-    }, 3000); // Auto slide every 3 seconds
-
-    return () => clearInterval(interval);
-  }, []);
-
-  const currentClient = clients[currentIndex];
-
   return (
-   <>
+    <>
       <Header />
       <section className="our-clients">
         <div className="container">
           <h2 className="section-title">Our Clients</h2>
-          <p className="section-description animated-text">We are proud to have worked with a diverse range of clients.And delever the new cutting age technology products.</p>
-          <div className="client-slider-container">
-            <div className="client-card">
-              <div className="client-info">
-                <img src={currentClient.logo} alt={currentClient.name} className="client-logo" />
-                <h3 className="client-name">{currentClient.name}</h3>
-                <div className="rating">
-                  {[...Array(5)].map((_, i) => (
-                    <span key={i} className={i < currentClient.rating ? 'star-filled' : 'star'}>&#9733;</span>
-                  ))}
+          <p className="section-description animated-text">We are proud to have worked with a diverse range of clients. And deliver the new cutting-edge technology products.</p>
+          <div className="client-cards">
+            {clients.map(client => (
+              <div className="client-card" key={client.id}>
+                <div className="client-info">
+                  <img src={client.logo} alt={client.name} className="client-logo" />
+                  <h3 className="client-name">{client.name}</h3>
+                  <div className="rating">
+                    {[...Array(5)].map((_, i) => (
+                      <span key={i} className={i < client.rating ? 'star-filled' : 'star'}>&#9733;</span>
+                    ))}
+                  </div>
+                  <p className="testimonial">{client.testimonial}</p>
                 </div>
-                <p className="testimonial">{currentClient.testimonial}</p>
               </div>
-            </div>
+            ))}
           </div>
         </div>
-        
       </section>
       <Footer />
     </>
   );
 };
 
-export default OurClients;
+export default OurClients;

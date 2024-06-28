@@ -1,20 +1,13 @@
-
-
+/* Employee Card CSS */
 .head-content {
   display: flex;
   justify-content: center;
-  
 }
 
 .our-team {
- height: 100vh;
- width: 100vw;
-  text-align: center;
-  padding: 40px 20px;
+  padding: 10px 20px;
   background: linear-gradient(0deg, #d9e9e8 0%, #cfbfda 100%);
   animation: gradientAnimation 5s ease infinite;
-  position: relative;
-  
 }
 
 @keyframes gradientAnimation {
@@ -24,12 +17,13 @@
 }
 
 .our-team h2 {
-  font-size: 2.5em;
+  font-size: 2em;
   margin-bottom: 20px;
-  color: #fff;
+  color: purple;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
   animation: headingAnimation 1.5s ease-out forwards;
   opacity: 0;
+  margin-top: 2px;
 }
 
 @keyframes headingAnimation {
@@ -37,61 +31,101 @@
   100% { transform: translateY(0); opacity: 1; }
 }
 
-.heading {
-  font-size: 2em;
-  margin-top: -20px;
+/* OurTeam.css */
+
+/* Centering and styling header and paragraph */
+h2, para {
+  text-align: center;
+  animation: fadeInUp 1s ease-in-out; /* Example animation */
+  color: purple; /* Text color */
+}
+
+.para  {
+  overflow: hidden; /* Ensure text animation works */
+  /* white-space: nowrap; Prevent wrapping */
+  /* animation: fadeInUp ; Text typing animation */
+  /* border-right: 2px solid purple; Purple border  */
+  /* animation: fadeInUp ; Text typing animation */
+  /* animation: fadeInUp 1s ease-in-out; */
+  width: 100%;
+  /* border-right: 2px solid purple;  */
+  font-size: 1.2rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: headingTextAnimation 2s ease-in-out infinite;
+  color: #f0f0f0
+  ;
+  gap: 1px;
 }
 
-.para {
-  font-size: 1.2em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: purple;
-  gap: 3px;
-  animation: headingTextAnimation 2s ease-in-out infinite;
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-@keyframes headingTextAnimation {
-  0%, 100% { transform: scale(1); color: purple; }
-  50% { transform: scale(1.1); color: purple; }
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
 }
 
-.our-team p {
-  font-size: 1.2em;
-  margin-bottom: 40px;
-  
-  color: #000;
- 
+/* Styling for card */
+.card {
+  background-color: #f0f0f0; /* Example background color */
+  padding: 20px;
+  margin: 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  animation: slideInLeft 1s ease-in-out; /* Example animation */
+  color: #333; /* Text color */
+}
+
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .card {
+    width: 100%; /* Adjust card width for smaller screens */
+  }
 }
 
 .team-list {
   list-style-type: none;
-  margin-bottom: -40px;
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
-  flex-wrap: nowrap;
-  overflow-x: hidden;
-  gap: -200px;
+  padding: 0;
+  margin: 0;
 }
 
 .team-member {
-  flex: 0 0 300px;
-  /* background: linear-gradient(145deg, #f0f0f0, #ffffff); */
+  flex: 0 0 200px; /* Reduce size of the card */
+  background-color: white;
   border: none;
   border-radius: 20px;
-  width: 300px;
-  padding: 20px;
-  gap: 30px;
-  margin-bottom: 20px;
+  padding: 15px; /* Reduce padding */
+  margin: 10px;
   text-align: center;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s;
   position: relative;
   overflow: hidden;
 }
@@ -99,35 +133,11 @@
 .team-member:hover {
   transform: translateY(-15px);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-  background-color: transparent(gray);
-  z-index: 1;
-}
-
-.team-member::before {
-
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: transparent;
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-
-.team-member:hover::before {
-  opacity: 1;
-  overflow: hidden;
 }
 
 .profile-picture {
-  width: 120px;
-  height: 120px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 3000px;
+  width: 80px; /* Reduce size */
+  height: 80px; /* Reduce size */
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 15px;
@@ -139,14 +149,10 @@
   transform: scale(1.1);
 }
 
-.member-info {
-  text-align: center;
-}
-
 .member-info h3 {
-  font-size: 1.5em;
+  font-size: 1.2em; /* Reduce font size */
   margin: 10px 0 5px 0;
-  color: #000;
+  color: rgb(163, 76, 163);
   animation: textAnimation 1s ease forwards;
   opacity: 0;
 }
@@ -156,90 +162,54 @@
   100% { transform: translateY(0); opacity: 1; }
 }
 
-.postion {
-  font-weight: bold;
-  font-size: 1.1em;
-  margin-bottom: -100px;
-  gap:30px;
-  color: black;
-  padding-bottom: -5000px;
-}
-
-.info {
-  font-size: 0.9em;
-  color: #000;
-  line-height: 1.4em;
+.member-info p {
+  font-size: 0.9em; /* Reduce font size */
+  color: rgb(116, 112, 112);
+  line-height: 1.2em;
 }
 
 /* Responsive Design */
 @media (max-width: 1200px) {
-  .our-team h2 {
-    font-size: 2.2em;
-  }
-
   .team-member {
-    width: 250px;
-    padding: 15px;
+    flex: 0 0 150px; /* Adjust size for medium screens */
   }
 
   .profile-picture {
-    width: 100px;
-    height: 100px;
+    width: 60px; /* Adjust size for medium screens */
+    height: 60px; /* Adjust size for medium screens */
+  }
+
+  .member-info h3 {
+    font-size: 1em; /* Adjust font size for medium screens */
   }
 }
 
 @media (max-width: 768px) {
-  .our-team h2 {
-    font-size: 2em;
-  }
-
   .team-member {
-    width: 200px;
-    padding: 10px;
+    flex: 0 0 120px; /* Adjust size for small screens */
   }
 
   .profile-picture {
-    width: 80px;
-    height: 80px;
+    width: 50px; /* Adjust size for small screens */
+    height: 50px; /* Adjust size for small screens */
   }
 
   .member-info h3 {
-    font-size: 1.3em;
-  }
-
-  .postion {
-    font-size: 1em;
-  }
-
-  .info {
-    font-size: 0.8em;
+    font-size: 0.9em; /* Adjust font size for small screens */
   }
 }
 
 @media (max-width: 480px) {
-  .our-team h2 {
-    font-size: 1.8em;
-  }
-
   .team-member {
-    width: 150px;
-    padding: 8px;
+    flex: 0 0 100px; /* Adjust size for very small screens */
   }
 
   .profile-picture {
-    width: 60px;
-    height: 60px;
+    width: 40px; /* Adjust size for very small screens */
+    height: 40px; /* Adjust size for very small screens */
   }
 
   .member-info h3 {
-    font-size: 1.1em;
-  }
-
-  .postion {
-    font-size: 0.9em;
-  }
-
-  .info {
-    font-size: 0.7em;
-  }
+    font-size: 0.8em; /* Adjust font size for very small screens */
+}
 }
